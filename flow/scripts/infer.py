@@ -90,7 +90,7 @@ model.load_state_dict(ckpt_dict, strict=True)
 
 # output folder
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-workspace = os.path.join(args.output_dir, "flow_" + args.config.split(".")[-1] + "_" + timestamp)
+workspace = args.output_dir
 if not os.path.exists(workspace):
     os.makedirs(workspace)
 else:
